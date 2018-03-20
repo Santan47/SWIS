@@ -57,9 +57,10 @@
   <h1><strong>GREEN - INDIA <br> SWIS</strong></h1> 
   <p><strong>smart water irrigation system</strong></p><br> 
   <form class="form-inline">
-    <input type="text" class="form-control" size="50" placeholder="Device id" required><br>
+    <input type="text" class="form-control" size="50" placeholder="Device id." required><br>
     <input type="text" class="form-control pass" size="50" placeholder="Mobile No." required><br>
-    <button type="button" class="btn btn-danger pass">Proceed</button>
+    <input type="text" class="form-control pass" size="50" placeholder="Location." required><br>
+    <button type="button" onclick="vis()" class="btn btn-danger pass">Proceed</button>
   </form>
 </div>
 
@@ -122,13 +123,13 @@
 				<br><br><br><br><br><br>
 				<p class="glyphicon-chevron-right"><em class="howdaspworks capi"><strong>&nbsp;&nbsp;if you want to visualise data through the device id.</strong></em></p>
 				<br><br>
-				<button type="button" align="center" class="text-center capi btn btn-success pass">visualise data by device id</button>
+				<button type="button" align="center" onclick="window.location.href='http://rtuproject.co.nf/User_Hisory.php?di=1&mn=7691013116'" class="text-center capi btn btn-success pass">visualise data by device id</button>
 			</div>
 			<div class="text-center col-sm-6">				
 				<br><br><br><br><br><br>
 				<p class="glyphicon-chevron-right"><em class="howdaspworks capi"><strong>&nbsp;&nbsp;if you want to visualise data through the mobile no.</strong></em></p>
 				<br><br>
-				<button type="button" class="capi btn btn-success pass">visualise data by mobile no.</button>
+				<button type="button" onclick="window.location.href='http://rtuproject.co.nf/government_status.php?l=ru-jaipur'" class="capi btn btn-success pass">visualise data by location.</button>
 				<br><br><br><br><br><br>
 			</div>
 	</div>
@@ -265,6 +266,10 @@ function carousel() {
 <!-- Add Google Maps -->
 <script src="http://maps.googleapis.com/maps/api/js"></script>
 <script>
+function vis()
+{
+    window.location.href = '#page4';
+}
 var myCenter = new google.maps.LatLng(41.878114, -87.629798);
 
 function initialize() {
